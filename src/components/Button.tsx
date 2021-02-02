@@ -21,10 +21,10 @@ const styles = StyleSheet.create({
 
 const Button = ({label, primary, onPress}: ButtonProps) => {
     const color = primary ? "white" : undefined;
-    const backgroundColor = primary ? StyleGuide.palette.backgroundPrimary : undefined;
+    const backgroundColor = primary ? StyleGuide.palette.primary : undefined;
     return (
         <RectButton onPress={onPress}>
-            <SafeAreaView>
+            <SafeAreaView style={{ backgroundColor }} accessible>
                 <View style={styles.container}>
                     <Text type="headline" style={[styles.label, {color}]}>
                         {label}
