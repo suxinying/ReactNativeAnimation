@@ -6,6 +6,7 @@ import Examples from "./src/Examples";
 import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from "@react-navigation/native";
 import Worklets from "./src/Worklets";
+import PanGesture from "./src/PanGesture";
 
 const Stack = createStackNavigator<Routes>();
 const AppNavigator = () => (
@@ -22,6 +23,13 @@ const AppNavigator = () => (
             component={Worklets}
             options={{
                 title: "Worklets"
+            }}
+        />
+        <Stack.Screen
+            name="PanGesture"
+            component={PanGesture}
+            options={{
+                title: "PanGesture"
             }}
         />
     </Stack.Navigator>
