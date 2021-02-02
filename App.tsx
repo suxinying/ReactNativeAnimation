@@ -5,6 +5,7 @@ import {Routes} from "./src/Routes";
 import Examples from "./src/Examples";
 import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from "@react-navigation/native";
+import Worklets from "./src/Worklets";
 
 const Stack = createStackNavigator<Routes>();
 const AppNavigator = () => (
@@ -16,6 +17,13 @@ const AppNavigator = () => (
             title: "Reanimated2 Examples"
           }}
       />
+        <Stack.Screen
+            name="Worklets"
+            component={Worklets}
+            options={{
+                title: "Worklets"
+            }}
+        />
     </Stack.Navigator>
 )
 export default function App() {
